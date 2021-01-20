@@ -8,7 +8,7 @@ const UserModel = require('./models/User');
 
 const DB_KEY = process.env.MONGO_DB_KEY;
 
-const MongoURI = `mongodb+srv://-----:${process.env.MONGO_DB_KEY}@cluster-.-----.mongodb.net/workTimer?retryWrites=true&w=majority`
+const MongoURI = `mongodb+srv://-----:${DB_KEY}@cluster-.-----.mongodb.net/---------?retryWrites=true&w=majority`
 //                                    ^Insert password here                                  ^Insert db name here
 
 mongoose.connect(MongoURI, {
