@@ -7,8 +7,15 @@ const MongoDBSesssion = require('connect-mongodb-session')(session);
 const mongoose = require('mongoose');
 const User = require('./models/User');
 
+<<<<<<< HEAD
 const MongoURI = `mongodb://example:${process.env.MONGO_DB_KEY}@127.0.0.1/tutoring?retryWrites=true&w=majority`
 //                                  ^Insert password here       ^URL here ^Insert db name here
+=======
+const DB_KEY = process.env.MONGO_DB_KEY;
+
+const MongoURI = `mongodb+srv://-----:${DB_KEY}@cluster-.-----.mongodb.net/---------?retryWrites=true&w=majority`
+//                                    ^Insert password here                                  ^Insert db name here
+>>>>>>> 01d2566cb3dcd85b921303e1baba41a50ab0ee53
 
 mongoose.connect(MongoURI, {
   useNewUrlParser: true,
