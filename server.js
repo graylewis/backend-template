@@ -11,7 +11,7 @@ const cors = require('cors');
 
 const { MONGO_DB_KEY } = process.env;
 const MongoURI = `mongodb://example:${MONGO_DB_KEY}@127.0.0.1/tutoring?retryWrites=true&w=majority`
-//                                  ^Insert password here       ^URL here ^Insert db name here
+//                                  ^Insert password here     ^Insert db name here
 
 mongoose.connect(MongoURI, {
   useNewUrlParser: true,
