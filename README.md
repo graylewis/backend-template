@@ -1,7 +1,7 @@
 # backend-template
-Boilerplate code for session authentication with Node.js &amp; MongoDB
+Boilerplate code for JWT authentication with Node.js &amp; MongoDB
 
-This repository is a template for creating simple backends with session-based authentication.
+This repository is a template for creating simple backends with JWT-based authentication.
 
 Setup:
 1. Set the MongoURI in the server.js file
