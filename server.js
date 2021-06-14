@@ -2,9 +2,6 @@ require('dotenv').config()
 
 const express = require('express');
 const { check } = require('express-validator')
-const session = require('express-session');
-const MongoDBSession = require('connect-mongodb-session')(session);
-const mongoose = require('mongoose');
 
 const Auth = require('./controllers/auth');
 const cors = require('cors');
@@ -20,17 +17,7 @@ mongoose.connect(MongoURI, {
 })
   .then(res => console.log('Database Connected'));
 
-const store = new MongoDBSession({
-  uri: MongoURI,
-  collection: 'sessions',
-})
-
 const app = express();
-app.use(session({
-  secret: process.env.SECRET,
-  resave: false,
-  saveUninitialized: false,
-}));
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
